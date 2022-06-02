@@ -1,0 +1,130 @@
+.navbar {
+  width: 100%;
+  height: 3.3rem;
+  // background-color: var(--primary-color);
+  // color: #fff;
+  color: var(--primary-color);
+  font-family: var(--font-base);
+  display: flex;
+  box-shadow: 6px 10px 10px -1px rgba(199, 191, 191, 0.75);
+  .logo {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 10px 0 10px 6rem;
+    border-radius: 5px;
+    padding: 0 5px;
+    color: #fff;
+    background-color: var(--primary-color);
+  }
+  .search {
+    margin: 10px 10px 0 10px;
+    position: relative;
+
+    input {
+      display: block;
+      width: 400px;
+      height: 34px;
+      background: transparent;
+      // border: solid 2px #ccc;
+      border: solid 2px #999;
+      transition: all 0.2s ease-in-out;
+      padding: 0 15px;
+      border-radius: 5px;
+      &:focus {
+        // border-color: #fff;
+        border-color: var(--primary-color);
+      }
+    }
+    label {
+      position: absolute;
+      cursor: text;
+      z-index: 2;
+      top: 18%;
+      left: 10px;
+      font-size: 17px;
+      // background: var(--primary-color);
+      background: #fff;
+      padding: 0 10px;
+      margin-top: 3px;
+      color: #999;
+      transition: all 0.2s ease-in-out;
+      transform: translateY(-18%);
+      pointer-events: none;
+    }
+    input:focus + label,
+    input:valid + label {
+      font-size: 12px;
+      top: -6px;
+      // color: #fff;
+      color: var(--primary-color);
+    }
+    span {
+      position: absolute;
+      top: 7px;
+      right: 10px;
+      font-size: 25px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+
+  .home {
+    margin: 8px 80px 0 20rem;
+    font-size: 25px;
+    cursor: pointer;
+    color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+      font-size: 13px;
+      font-weight: bold;
+      margin-top: -7px;
+    }
+    &:hover {
+      z-index: 2;
+      border-bottom: 2px solid var(--primary-color);
+    }
+  }
+  .notification {
+    margin: 8px 70px 0 10px;
+    font-size: 25px;
+    cursor: pointer;
+    // border: 2px solid var(--primary-color);
+    // border-radius: 50%;
+    // height: 25px;
+    // width: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+      font-size: 13px;
+      font-weight: bold;
+      margin-top: -7px;
+    }
+    &:hover {
+      z-index: 2;
+      border-bottom: 2px solid var(--primary-color);
+    }
+  }
+  .profile {
+    margin: 8px 20px 0 10px;
+    font-size: 25px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+      font-size: 13px;
+      font-weight: bold;
+      margin-top: -6px;
+    }
+    &:hover {
+      z-index: 2;
+      border-bottom: 2px solid var(--primary-color);
+    }
+  }
+}

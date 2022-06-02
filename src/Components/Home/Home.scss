@@ -1,0 +1,68 @@
+.home__container {
+  font-family: var(--font-base);
+  color: #fff;
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  header {
+    text-align: center;
+    h1 {
+      color: var(--primary-color);
+    }
+  }
+  .shopDetails_card {
+    display: flex;
+
+    .card {
+      background-color: var(--primary-color);
+      width: 21.5rem;
+      height: 10rem;
+      padding: 20px 0;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 20px;
+      display: flex;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        box-shadow: 6px 10px 10px 0px rgba(160, 154, 154, 0.75);
+        margin-top: 17px;
+      }
+      .card__sec1 {
+        width: 12rem;
+        .profile {
+          font-size: 5rem;
+          display: block;
+          height: 5rem;
+          margin-left: 15px;
+        }
+        .shop_name {
+          margin: 0 10px 5px 10px;
+          span {
+            font-weight: bold;
+            padding: 2px;
+            &:hover {
+              text-decoration: underline;
+              color: rgb(136, 192, 255);
+            }
+          }
+        }
+        .shop_address {
+          margin: 0 10px 0 10px;
+          span {
+            font-weight: bold;
+            padding: 2px;
+            &:hover {
+              text-decoration: underline;
+              color: rgb(136, 192, 255);
+            }
+          }
+        }
+      }
+
+      .open_time {
+        width: 9rem;
+      }
+    }
+  }
+}
