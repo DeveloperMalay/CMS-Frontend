@@ -33,15 +33,17 @@
     .options {
       margin-top: 3rem;
       transition: all 0.2s ease-in-out;
-      span {
-        margin: 40px;
+      button {
+        margin: 0 40px;
         background-color: var(--primary-color);
         // background-color: #fff;
         color: #fff;
         // color: var(--primary-color);
         padding: 10px;
         border-radius: 20px;
-        cursor: pointer; 
+        cursor: pointer;
+        border: none;
+        font-size: 16px;
       }
     }
   }

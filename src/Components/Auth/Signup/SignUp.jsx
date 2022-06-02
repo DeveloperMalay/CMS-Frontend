@@ -77,7 +77,9 @@ const SignUp = () => {
             </span>
           </div>
           <div className="btn">
-            <button>SignUp</button>
+            <button  onClick={() => {
+                navigate("/welcome");
+              }}>SignUp</button>
           </div>
           <div className="log-in">
             <span>Already have an Account?</span>

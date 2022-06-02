@@ -1,0 +1,25 @@
+.greeting_container {
+
+  .greeting_card {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid var(--lightgray-color);
+    border-radius: 10px;
+    background-color: var(--white-color);
+    .greeting-image {
+      img {
+        height: 10rem;
+      }
+    }
+    .greeting-speech {
+      span {
+        font-size: 20px;
+        color: var(--primary-color);
+      }
+      h1 {
+        color: var(--primary-color);
+      }
+    }
+  }
+}

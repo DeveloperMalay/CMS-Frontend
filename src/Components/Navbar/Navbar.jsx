@@ -1,10 +1,11 @@
 import React from "react";
 import "./Navbar.scss";
-import {  AiOutlineSearch, AiFillHome } from "react-icons/ai";
+import { AiOutlineSearch, AiFillHome } from "react-icons/ai";
 import { BsPersonCircle } from "react-icons/bs";
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 import { MdCircleNotifications } from "react-icons/md";
 const Navbar = () => {
+  const navigate = useNavigate();
   return (
     <>
       <nav className="navbar">
@@ -17,20 +18,35 @@ const Navbar = () => {
             <AiOutlineSearch />
           </span>
         </div>
-        <div className="home">
+        <div
+          className="home"
+          onClick={() => {
+            navigate("/home");
+          }}
+        >
           <span>
             <AiFillHome />
           </span>
           <p>Home</p>
         </div>
-        <div className="notification">
+        <div
+          className="notification"
+          onClick={() => {
+            navigate("/home/notification");
+          }}
+        >
           <span>
             {/* <AiFillBell /> */}
             <MdCircleNotifications />
           </span>
           <p>Notifications</p>
         </div>
-        <div className="profile">
+        <div
+          className="profile"
+          onClick={() => {
+            navigate("/home/shopprofile");
+          }}
+        >
           <span>
             <BsPersonCircle />
           </span>

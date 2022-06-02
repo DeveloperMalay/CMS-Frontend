@@ -1,0 +1,39 @@
+.notification_container {
+  background-color: var(--extreamlight-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: var(--font-base);
+  height: auto;
+  .notifications {
+    margin: 10px;
+    width: 85%;
+    height: 8rem;
+    display: flex;
+    border-radius: 8px;
+    flex-direction: column;
+    background-color: var(--white-color);
+    .today {
+      width: 100%;
+      span {
+        height: 40px;
+        width: 100%;
+        padding: 10px;
+        &:hover {
+          background-color: var(--lightGray-color);
+        }
+      }
+    }
+    .earlier {
+      width: 100%;
+      span {
+        height: 40px;
+        width: 100%;
+        padding: 10px;
+        &:hover {
+          background-color: var(--lightGray-color);
+        }
+      }
+    }
+  }
+}
