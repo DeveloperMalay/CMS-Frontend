@@ -25,25 +25,42 @@
     .profile {
       margin-left: 20px;
       .profile_name {
-        color: var(--primary-color);
+        color: #000;
       }
       .address {
-        color: var(--primary-color);
+        color: #000;
+        &:hover {
+          color: var(--primary-color);
+        }
         p {
           span {
             cursor: pointer;
           }
         }
       }
-      .avalibility {
-        color: var(--primary-color);
-        border: 1px solid var(--primary-color);
-        border-radius: 20px;
-        width: 8rem;
+      .make_inline_div {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 10px;
+        .avalibility {
+          border: 1px solid var(--primary-color);
+          border-radius: 20px;
+          width: 8rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 10px;
+          color: #000;
+        }
+        .edit-btn {
+          color: #000;
+          cursor: pointer;
+          font-size: 20px;
+          &:hover {
+            color: red;
+          }
+          // display: inline-block;
+        }
       }
     }
     .setting-section {
@@ -92,14 +109,16 @@
       align-items: center;
       .input_timeslot {
         width: 10rem;
-        color: var(--primary-color);
+        color: #000;
+        // color: var(--primary-color);
         input {
           width: 10rem;
           margin: 10px;
         }
       }
       .serices {
-        color: var(--primary-color);
+        color: #000;
+        // color: var(--primary-color);
         p {
           font-size: 20px;
         }
@@ -107,17 +126,29 @@
           list-style: none;
         }
       }
+      @media screen and (max-width: 600px) {
+        width: 100%;
+      }
     }
     .work_details {
       background-color: var(--white-color);
       width: 80%;
-      color: var(--primary-color);
+      color: #000;
+      // color: var(--primary-color);
       margin-left: 5px;
       padding: 10px;
       border-radius: 10px;
       ul {
         list-style: none;
       }
+      @media screen and (max-width: 600px) {
+        width: 100%;
+        margin-top: 20px;
+      }
+    }
+    @media screen and (max-width: 600px) {
+      width: auto;
+      flex-direction: column;
     }
   }
 }

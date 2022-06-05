@@ -8,3 +8,8 @@ export { default as ServiceProviderDetails } from "./ServiceProvider/ServiceProv
 export { default as Greeting } from "./Greeting/Greeting";
 export { default as ShopProfile } from "./ShopProfile/ShopProfile";
 export { default as Notification } from "./Notification/Notification";
+export { default as Search } from "./Search/Search";
+export { default as Footer } from "./Footer/Footer";
+export { default as Passwordresetmail } from "./Auth/Passwordresetmail/Passwordresetmail";
+export { default as Checkemail } from "./Auth/Passwordresetmail/Checkemail";
+export { default as Resetpassword } from "./Auth/ResetPassword/Resetpassword";

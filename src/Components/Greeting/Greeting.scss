@@ -1,5 +1,4 @@
 .greeting_container {
-
   .greeting_card {
     display: flex;
     justify-content: space-evenly;
@@ -8,17 +7,31 @@
     border-radius: 10px;
     background-color: var(--white-color);
     .greeting-image {
+      background-color: #fff;
       img {
         height: 10rem;
+        background-color: #fff;
+        @media screen and (max-width: 600px) {
+          height: 6rem;
+        }
       }
     }
     .greeting-speech {
+      background-color: #fff;
       span {
         font-size: 20px;
         color: var(--primary-color);
+        background-color: #fff;
+        @media screen and (max-width: 600px) {
+          font-size: 13px;
+        }
       }
       h1 {
         color: var(--primary-color);
+        background-color: #fff;
+        @media screen and (max-width: 600px) {
+          font-size: 15px;
+        }
       }
     }
   }

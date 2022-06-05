@@ -29,22 +29,22 @@ const Customer = () => {
               </div>
             </div>
             <div className="number age">
-              <input type="number" name="age" required />
+              <input type="text" name="age" required />
               <label htmlFor="age">Age</label>
             </div>
             <div className="gender">
-              <select name="gender">
+              <select name="gender" required>
                 <option value="">--Gender--</option>
                 <option value="male">Male</option>
                 <option value="female">Female</option>
               </select>
             </div>
             <div className="number phone">
-              <input type="tel" name="phone" />
+              <input type="tel" name="phone" required/>
               <label htmlFor="phone">Phone</label>
             </div>
             <div className="number whatsapp">
-              <input type="tel" name="whatsapp" />
+              <input type="tel" name="whatsapp"  required/>
               <label htmlFor="whatsapp">Whatsapp</label>
             </div>
             <div className="btn">

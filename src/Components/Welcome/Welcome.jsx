@@ -25,7 +25,7 @@ const Welcome = () => {
               navigate("/serviceproviderdetails");
             }}
           >
-            Serice Proider
+            Service Provider
           </button>
         </div>
       </div>

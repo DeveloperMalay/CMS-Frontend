@@ -1,4 +1,5 @@
 import React from "react";
+// import { Fragment } from "react";
 import {
   Login,
   SignUp,
@@ -9,6 +10,10 @@ import {
   ServiceProviderDetails,
   ShopProfile,
   Notification,
+  Search,
+  Passwordresetmail,
+  Checkemail,
+  Resetpassword,
 } from "./Components";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
@@ -21,6 +26,9 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/welcome" element={<Welcome />} />
           <Route path="/customerdata" element={<CustomerDetails />} />
+          <Route path="/passwordresetmail" element={<Passwordresetmail />} />
+          <Route path="/checkemail" element={<Checkemail />} />
+          <Route path="/resetpassword" element={<Resetpassword />} />
           <Route
             path="/serviceproviderdetails"
             element={<ServiceProviderDetails />}
@@ -29,7 +37,9 @@ const App = () => {
             <Route path="" element={<Home />} />
             <Route path="shopprofile" element={<ShopProfile />} />
             <Route path="notification" element={<Notification />} />
+            <Route path="search" element={<Search />} />
           </Route>
+          {/* <Route path="/home" element={<Footer />} /> */}
           <Route path="*" element={<h1>Error 404 Page not found !!</h1>} />
         </Routes>
       </BrowserRouter>

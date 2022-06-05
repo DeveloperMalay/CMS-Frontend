@@ -4,6 +4,7 @@ import { AiOutlineSearch, AiFillHome } from "react-icons/ai";
 import { BsPersonCircle } from "react-icons/bs";
 import { Outlet, useNavigate } from "react-router-dom";
 import { MdCircleNotifications } from "react-icons/md";
+import Footer from "../Footer/Footer";
 const Navbar = () => {
   const navigate = useNavigate();
   return (
@@ -12,7 +13,14 @@ const Navbar = () => {
         <div className="logo">MySalon</div>
 
         <div className="search">
-          <input type="search" name="search" required />
+          <input
+            type="search"
+            name="search"
+            required
+            onFocus={() => {
+              navigate("/home/search");
+            }}
+          />
           <label htmlFor="search">Search</label>
           <span>
             <AiOutlineSearch />
@@ -54,6 +62,7 @@ const Navbar = () => {
         </div>
       </nav>
       <Outlet />
+      <Footer />
     </>
   );
 };

@@ -16,58 +16,105 @@
       color: var(--primary-color);
     }
   }
-  .shopDetails_card {
-    display: flex;
-
-    .card {
-      background-color: var(--primary-color);
-      width: 21.5rem;
-      height: 10rem;
-      padding: 20px 0;
-      border-radius: 8px;
-      cursor: pointer;
-      margin: 20px;
+  .allcards {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    .shopDetails_card {
       display: flex;
-      transition: all 0.2s ease-in-out;
-      &:hover {
-        box-shadow: 6px 10px 10px 0px rgba(160, 154, 154, 0.75);
-        margin-top: 17px;
-      }
-      .card__sec1 {
-        width: 12rem;
-        .profile {
-          font-size: 5rem;
-          display: block;
-          height: 5rem;
-          margin-left: 15px;
-        }
-        .shop_name {
-          margin: 0 10px 5px 10px;
-          span {
-            font-weight: bold;
-            padding: 2px;
-            &:hover {
-              text-decoration: underline;
-              color: rgb(136, 192, 255);
-            }
-          }
-        }
-        .shop_address {
-          margin: 0 10px 0 10px;
-          span {
-            font-weight: bold;
-            padding: 2px;
-            &:hover {
-              text-decoration: underline;
-              color: rgb(136, 192, 255);
-            }
-          }
-        }
-      }
 
-      .open_time {
-        width: 9rem;
+      .card {
+        // background-color: var(--primary-color);
+        background-color: var(--white-color);
+        color: var(--primary-color);
+        width: 21.5rem;
+        height: 10rem;
+        padding: 20px 0;
+        border-radius: 8px;
+        cursor: pointer;
+        margin: 20px;
+        display: flex;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+          box-shadow: 6px 10px 10px 0px rgba(160, 154, 154, 0.75);
+          margin-top: 17px;
+        }
+        .card__sec1 {
+          width: 12rem;
+          background-color: #fff;
+          .profile {
+            font-size: 5rem;
+            display: block;
+            height: 5rem;
+            margin-left: 15px;
+            background-color: #fff;
+            span {
+              background-color: #fff;
+            }
+
+            @media screen and (max-width: 600px) {
+              font-size: 3rem;
+              height: auto;
+            }
+          }
+          .shop_name {
+            margin: 0 10px 5px 10px;
+            background-color: #fff;
+            span {
+              font-weight: bold;
+              padding: 2px;
+              background-color: #fff;
+              &:hover {
+                text-decoration: underline;
+                // color: rgb(136, 192, 255);
+                color: rgb(20, 101, 232);
+              }
+            }
+            @media screen and (max-width: 600px) {
+              font-size: 12px;
+            }
+          }
+          .shop_address {
+            margin: 0 10px 0 10px;
+            background-color: #fff;
+            span {
+              font-weight: bold;
+              padding: 2px;
+              background-color: #fff;
+              &:hover {
+                text-decoration: underline;
+                // color: rgb(136, 192, 255);
+                color: rgb(20, 101, 232);
+              }
+            }
+            @media screen and (max-width: 600px) {
+              font-size: 12px;
+            }
+          }
+          @media screen and (max-width: 600px) {
+            width: auto;
+          }
+        }
+
+        .open_time {
+          width: 9rem;
+          background-color: #fff;
+          p {
+            background-color: #fff;
+          }
+          @media screen and (max-width: 600px) {
+            font-size: 12px;
+            width: 7rem;
+            margin-right: 5px;
+          }
+        }
+        @media screen and (max-width: 600px) {
+          width: auto;
+          height: auto;
+        }
       }
+    }
+    @media screen and (max-width: 600px) {
+      grid-template-columns: auto;
     }
   }
 }

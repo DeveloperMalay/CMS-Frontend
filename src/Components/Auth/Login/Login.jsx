@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import "./Login.scss";
 import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 
@@ -54,7 +54,15 @@ const Login = () => {
               {showpassword ? <AiFillEyeInvisible /> : <AiFillEye />}
             </span>
           </div>
-          <div className="btn">
+          <Link to="/passwordresetmail" className="forget_password">
+            <p>Forget Password?</p>
+          </Link>
+          <div
+            className="btn"
+            onClick={() => {
+              navigate("/home");
+            }}
+          >
             <button>Login</button>
           </div>
           <div className="sign-in">

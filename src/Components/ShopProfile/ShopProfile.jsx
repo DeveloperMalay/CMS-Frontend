@@ -2,9 +2,13 @@ import React from "react";
 import { images } from "../../Constants";
 import "./ShopProfile.scss";
 import { BsFillGeoAltFill } from "react-icons/bs";
+import { BiEdit } from "react-icons/bi";
 import { HiOutlineStatusOnline, HiOutlineStatusOffline } from "react-icons/hi";
 
 const ShopProfile = () => {
+  const d = new Date();
+  const time = d.toLocaleString([], { hour: "2-digit", minute: "2-digit" });
+
   return (
     <div className="shopProfile_container">
       <div className="shopprofile_details">
@@ -20,16 +24,21 @@ const ShopProfile = () => {
               <span>
                 <BsFillGeoAltFill />
               </span>
-              Ranaghat,India - 8:04 pm local time
+              Ranaghat,India -{time} local time
             </p>
             {/* AiFillThunderbolt */}
             {/* HiOutlineStatusOffline */}
           </div>
-          <div className="avalibility">
-            <div>
-              <HiOutlineStatusOnline />
+          <div className="make_inline_div">
+            <div className="avalibility">
+              <div>
+                <HiOutlineStatusOnline />
+              </div>
+              <div>Available now</div>
             </div>
-            <div>Available now</div>
+            <span className="edit-btn">
+              <BiEdit />
+            </span>
           </div>
         </div>
         <div className="setting-section">

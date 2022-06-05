@@ -3,22 +3,43 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   font-family: var(--font-base);
   height: auto;
+  h2 {
+    margin: 20px 0 0 0;
+  }
   .notifications {
     margin: 10px;
     width: 85%;
-    height: 8rem;
+    min-height: 10rem;
     display: flex;
     border-radius: 8px;
     flex-direction: column;
-    background-color: var(--white-color);
+    // background-color: var(--white-color);
     .today {
       width: 100%;
+      height: auto;
+      padding: 10px 0;
+      margin-bottom: 1.5rem;
+      border-radius: 8px;
+      background-color: var(--white-color);
+      position: relative;
+      h4 {
+        position: absolute;
+        top: -0.9rem;
+        left: 3px;
+        background-color: var(--primary-color);
+        padding: 3px;
+        border-radius: 12px;
+        color: var(--white-color);
+      }
       span {
-        height: 40px;
-        width: 100%;
+        display: block;
         padding: 10px;
+        width: 100%;
+        cursor: pointer;
+        background-color: #fff;
         &:hover {
           background-color: var(--lightGray-color);
         }
@@ -26,10 +47,27 @@
     }
     .earlier {
       width: 100%;
+      height: auto;
+      padding: 10px 0;
+      margin-bottom: 12px;
+      border-radius: 8px;
+      background-color: var(--white-color);
+      position: relative;
+      h4 {
+        position: absolute;
+        top: -0.9rem;
+        left: 3px;
+        background-color: var(--primary-color);
+        padding: 3px;
+        border-radius: 12px;
+        color: var(--white-color);
+      }
       span {
-        height: 40px;
+        display: block;
         width: 100%;
         padding: 10px;
+        cursor: pointer;
+        background-color: #fff;
         &:hover {
           background-color: var(--lightGray-color);
         }
