@@ -77,9 +77,13 @@ const SignUp = () => {
             </span>
           </div>
           <div className="btn">
-            <button  onClick={() => {
+            <button
+              onClick={() => {
                 navigate("/welcome");
-              }}>SignUp</button>
+              }}
+            >
+              SignUp
+            </button>
           </div>
           <div className="log-in">
             <span>Already have an Account?</span>

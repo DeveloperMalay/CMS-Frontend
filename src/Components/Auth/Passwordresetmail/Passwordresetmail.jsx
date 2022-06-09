@@ -1,6 +1,7 @@
 import React from "react";
 import "./passwordresetemail.scss";
 import { useNavigate } from "react-router-dom";
+import { RiLockPasswordFill } from "react-icons/ri";
 
 const Passwordresetmail = () => {
   const navigate = useNavigate();
@@ -8,6 +9,11 @@ const Passwordresetmail = () => {
     <div className="send_email">
       <form action="">
         <div className="form__container">
+          <div className="password_logo">
+            <span>
+              <RiLockPasswordFill />
+            </span>
+          </div>
           <header>
             <h1>Reset password</h1>
           </header>

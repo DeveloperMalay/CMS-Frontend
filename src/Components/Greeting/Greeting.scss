@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    border: 1px solid var(--lightgray-color);
+    border: 1px solid var(--lightGray-color);
     border-radius: 10px;
     background-color: var(--white-color);
     .greeting-image {
@@ -12,7 +12,7 @@
         height: 10rem;
         background-color: #fff;
         @media screen and (max-width: 600px) {
-          height: 6rem;
+          height: 5rem;
         }
       }
     }

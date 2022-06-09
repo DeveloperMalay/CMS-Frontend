@@ -73,9 +73,9 @@ const Footer = () => {
               Profile
             </li>
             <li
-              onClick={() => {
-                navigate("/home/search");
-              }}
+              // onClick={() => {
+              //   navigate("/home/search");
+              // }}
             >
               Search
             </li>

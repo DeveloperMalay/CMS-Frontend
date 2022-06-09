@@ -23,7 +23,7 @@ const Resetpassword = () => {
   return (
     <div className="reset">
       <form>
-        <div className="form__container">
+        <div className="container">
           <div className="password_logo">
             <span>
               <RiLockPasswordFill />
@@ -32,10 +32,10 @@ const Resetpassword = () => {
           <header>
             <h1>Create new password</h1>
           </header>
-          <p>
+          <div className="p">
             Your new password must be different from previous used passwords.
-          </p>
-          <div className="form-item">
+          </div>
+          <div className="items">
             <input
               type={showpassword ? "password" : "text"}
               name="previous_password"
@@ -49,7 +49,7 @@ const Resetpassword = () => {
               {showpassword ? <AiFillEyeInvisible /> : <AiFillEye />}
             </span>
           </div>
-          <div className="form-item">
+          <div className="items">
             <input
               type={showpassword ? "password" : "text"}
               name="new_password"

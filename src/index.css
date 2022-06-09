@@ -7,6 +7,7 @@
   --primary-color: #4527a0;
   --button-color: #b8b8d1;
   --btn-color: #8b86c9;
+  --background-color: #efeffb;
   --secondary-color: #313bac;
   --black-color: #030303;
   --extreamlight-color: #f2f1f4;
@@ -21,8 +22,7 @@
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
- 
 }
-body{
-  background-color: var(--extreamlight-color);
+body {
+  background-color: var(--background-color);
 }

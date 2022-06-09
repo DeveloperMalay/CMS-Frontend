@@ -1,7 +1,7 @@
 .shopProfile_container {
   font-family: var(--font-base);
   color: #fff;
-  background-color: var(--extreamlight-color);
+  background-color: var(--background-color);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,20 +12,20 @@
     display: flex;
     align-items: center;
     border-radius: 10px;
-    margin-top: 3rem;
+    margin-top: 2rem;
     margin-bottom: 10px;
-    padding: 10px;
+    padding: 15px;
     width: 85%;
     background-color: var(--white-color);
     .profile-picture {
       img {
-        width: 6rem;
+        width: 7rem;
       }
     }
     .profile {
       margin-left: 20px;
       .profile_name {
-        color: #000;
+        color: var(--primary-color);
       }
       .address {
         color: #000;
@@ -57,7 +57,7 @@
           cursor: pointer;
           font-size: 20px;
           &:hover {
-            color: red;
+            color: var(--primary-color);
           }
           // display: inline-block;
         }
@@ -92,63 +92,117 @@
         margin: 10px;
       }
     }
-  }
-  .details {
-    display: flex;
-    width: 85%;
-    margin-bottom: 10px;
-    .add_details {
-      background-color: var(--white-color);
-      width: 20%;
-      height: 17rem;
-      margin-right: 5px;
-      border-radius: 10px;
-      padding: 10px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      .input_timeslot {
-        width: 10rem;
-        color: #000;
-        // color: var(--primary-color);
-        input {
-          width: 10rem;
-          margin: 10px;
-        }
-      }
-      .serices {
-        color: #000;
-        // color: var(--primary-color);
-        p {
-          font-size: 20px;
-        }
-        ul {
-          list-style: none;
-        }
-      }
-      @media screen and (max-width: 600px) {
-        width: 100%;
-      }
-    }
-    .work_details {
-      background-color: var(--white-color);
-      width: 80%;
-      color: #000;
-      // color: var(--primary-color);
-      margin-left: 5px;
-      padding: 10px;
-      border-radius: 10px;
-      ul {
-        list-style: none;
-      }
-      @media screen and (max-width: 600px) {
-        width: 100%;
-        margin-top: 20px;
-      }
-    }
+
     @media screen and (max-width: 600px) {
       width: auto;
       flex-direction: column;
+    }
+  }
+
+  .details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    min-height: 15rem;
+    margin-bottom: 10px;
+    padding: 15px;
+    width: 85%;
+    background-color: var(--white-color);
+    .available_slots {
+      position: relative;
+      color: var(--primary-color);
+      header {
+        text-decoration: underline;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      .time-slots {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        button {
+          padding: 8px;
+          background-color: var(--background-color);
+          border-radius: 20px;
+          border: none;
+          margin: 10px;
+          height: 2.5rem;
+          width: 10rem;
+          cursor: pointer;
+          &:hover {
+            background-color: var(--btn-color);
+            color: #fff;
+          }
+        }
+      }
+      .timeslot_edit-btn {
+        position: absolute;
+        top: 0;
+        right: -10rem;
+        color: #000;
+        cursor: pointer;
+        font-size: 20px;
+        &:hover {
+          color: var(--primary-color);
+        }
+      }
+    }
+    .serices_menu {
+      position: relative;
+      color: var(--primary-color);
+      margin-top: 3rem;
+      header {
+        text-decoration: underline;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      .services-list {
+        .service-item {
+          display: flex;
+          justify-content: space-around;
+          width: 30rem;
+          margin: 10px 0;
+        }
+      }
+    }
+  }
+
+  .galary {
+    position: relative;
+    color: var(--primary-color);
+    width: 85%;
+    background-color: #fff;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    header {
+      text-decoration: underline;
+      text-align: center;
+      margin: 10px 0;
+    }
+    .galary-image {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      margin: 20px;
+
+      img {
+        height: 10rem;
+        margin: 30px;
+      }
+    }
+    .galary-btn {
+      position: absolute;
+      top: 10px;
+      right: 30px;
+      color: #000;
+      cursor: pointer;
+      font-size: 20px;
+      &:hover {
+        color: var(--primary-color);
+      }
     }
   }
 }

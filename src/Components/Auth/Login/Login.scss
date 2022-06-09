@@ -46,7 +46,7 @@
           border-color: var(--primary-color);
         }
         @media screen and (max-width: 600px) {
-          width: auto;
+          width: 350px;
         }
       }
 
@@ -125,6 +125,9 @@
         list-style: none;
         &:hover {
           text-decoration: underline;
+        }
+        @media screen and (max-width: 600px) {
+          margin-left: 16rem;
         }
       }
     }

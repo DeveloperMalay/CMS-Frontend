@@ -13,16 +13,13 @@ const Navbar = () => {
         <div className="logo">MySalon</div>
 
         <div className="search">
-          <input
-            type="search"
-            name="search"
-            required
-            onFocus={() => {
+          <input type="search" name="search" required />
+          <label htmlFor="search">Search</label>
+          <span
+            onClick={() => {
               navigate("/home/search");
             }}
-          />
-          <label htmlFor="search">Search</label>
-          <span>
+          >
             <AiOutlineSearch />
           </span>
         </div>

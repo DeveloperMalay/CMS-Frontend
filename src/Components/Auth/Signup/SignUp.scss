@@ -18,6 +18,9 @@
     font-size: 30px;
     position: absolute;
     top: 55px;
+    // @media screen and (max-width: 600px) {
+    //   color: var(--primary-color);
+    // }
   }
   .image {
     img {
@@ -57,7 +60,7 @@
           border-color: var(--primary-color);
         }
         @media screen and (max-width: 600px) {
-          width: auto;
+          width: 350px;
         }
       }
 
@@ -92,7 +95,7 @@
     .btn {
       display: flex;
       justify-content: center;
-
+      margin-bottom: 10px;
       button {
         color: #fff;
         background-color: var(--primary-color);
@@ -124,4 +127,7 @@
       height: fit-content;
     }
   }
+  // @media screen and (max-width: 600px) {
+  //   background-color: #fff;
+  // }
 }

@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { images } from "../../Constants";
 import "./ShopProfile.scss";
 import { BsFillGeoAltFill } from "react-icons/bs";
 import { BiEdit } from "react-icons/bi";
 import { HiOutlineStatusOnline, HiOutlineStatusOffline } from "react-icons/hi";
+
 
 const ShopProfile = () => {
   const d = new Date();
@@ -24,10 +25,8 @@ const ShopProfile = () => {
               <span>
                 <BsFillGeoAltFill />
               </span>
-              Ranaghat,India -{time} local time
+              Ranaghat,India - {time}
             </p>
-            {/* AiFillThunderbolt */}
-            {/* HiOutlineStatusOffline */}
           </div>
           <div className="make_inline_div">
             <div className="avalibility">
@@ -46,44 +45,105 @@ const ShopProfile = () => {
           <button className="setting">Profile Setting</button>
         </div>
       </div>
+
       <div className="details">
-        <div className="add_details">
-          <div className="input_timeslot">
-            <label htmlFor="start-time">Start</label>
-            <input type="time" name="start-time" placeholder="12:00 am" />
-            <label htmlFor="end-time">End</label>
-            <input type="time" name="end-time" />
+        <div className="available_slots">
+          <header>
+            <h3>Available Slots</h3>
+          </header>
+          <div className="time-slots">
+            <button>10:00am - 11:00am</button>
+            <button>10:00am - 11:00am</button>
+            <button>10:00am - 11:00am</button>
+            <button>10:00am - 11:00am</button>
+            <button>10:00am - 11:00am</button>
+            <button>10:00am - 11:00am</button>
+            <button>10:00am - 11:00am</button>
           </div>
-          <div className="serices">
-            <p>Serices we provide</p>
-            <ul>
-              <li>hair cut</li>
-              <li>hair wash</li>
-              <li>shaving</li>
-              <li>Neck massage</li>
-              <li>Hair color</li>
-            </ul>
+          <div className="timeslot_edit-btn">
+            <span>
+              <BiEdit />
+            </span>
           </div>
         </div>
-        <div className="work_details">
-          <ul>
-            <li>
-              <span>8:00 am - 9:00 am</span>
-            </li>
-            <li>
-              <span>8:00 am - 9:00 am</span>
-            </li>
-            <li>
-              <span>8:00 am - 9:00 am</span>
-            </li>
-            <li>
-              <span>8:00 am - 9:00 am</span>
-            </li>
-          </ul>
+
+        <div className="serices_menu">
+          <header>
+            <h3>Services</h3>
+          </header>
+          <div className="services-list">
+            <div className="service-item">
+              <div className="title">Hair Cut</div>
+              <div className="price">Rs.50</div>
+            </div>
+
+            <div className="service-item">
+              <div className="title">Hair Cut</div>
+              <div className="price">Rs.50</div>
+            </div>
+
+            <div className="service-item">
+              <div className="title">Hair Cut</div>
+              <div className="price">Rs.50</div>
+            </div>
+
+            <div className="service-item">
+              <div className="title">Hair Cut</div>
+              <div className="price">Rs.50</div>
+            </div>
+
+            <div className="service-item">
+              <div className="title">Hair Cut</div>
+              <div className="price">Rs.50</div>
+            </div>
+
+            <div className="service-item">
+              <div className="title">Hair Cut</div>
+              <div className="price">Rs.50</div>
+            </div>
+          </div>
         </div>
+      </div>
+
+      <div className="galary">
+        <header>
+          <h3>Image Galary</h3>
+        </header>
+        <div className="galary-image">
+          <img src={images.hairstyle1} alt="" />
+          <img src={images.hairstyle2} alt="" />
+          <img src={images.hairstyle3} alt="" />
+          <img src={images.hairstyle4} alt="" />
+          <img src={images.hairstyle5} alt="" />
+          <img src={images.hairstyle6} alt="" />
+        </div>
+        <span className="galary-btn">
+          <BiEdit />
+        </span>
       </div>
     </div>
   );
 };
 
 export default ShopProfile;
+
+// const timeSlot = [
+//   {
+//     title: "",
+//     start_time: "",
+//     end_time: "",
+//   },
+// ];
+
+// var title = [];
+// var start_time = [];
+// var end_time = [];
+// const submit = (timeSlot) => {
+//   timeSlot.preventDefault();
+//   timeSlot.forEach((elem) => {
+//     title.push(elem.id);
+//     start_time.push(elem.start_time);
+//     end_time.push(elem.end_time);
+//   });
+// };
+// console.log(timeSlot);

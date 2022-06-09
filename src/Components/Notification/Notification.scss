@@ -1,5 +1,5 @@
 .notification_container {
-  background-color: var(--extreamlight-color);
+  background-color: var(--background-color);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,7 +19,7 @@
     // background-color: var(--white-color);
     .today {
       width: 100%;
-      height: auto;
+      min-height: 8rem;
       padding: 10px 0;
       margin-bottom: 1.5rem;
       border-radius: 8px;
@@ -47,7 +47,7 @@
     }
     .earlier {
       width: 100%;
-      height: auto;
+      min-height: 8rem;
       padding: 10px 0;
       margin-bottom: 12px;
       border-radius: 8px;
