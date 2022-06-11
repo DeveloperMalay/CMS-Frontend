@@ -19,7 +19,7 @@
         width: 22rem;
       }
       @media screen and (max-width: 600px) {
-       display: none;
+        display: none;
       }
     }
     .personal_data {
@@ -54,9 +54,7 @@
           &:focus {
             border-color: var(--primary-color);
           }
-          @media screen and (max-width: 600px) {
-            width: auto;
-          }
+
           option {
             color: #999 !important;
           }
@@ -78,9 +76,6 @@
           &:focus {
             border-color: var(--primary-color);
           }
-          @media screen and (max-width: 600px) {
-            width: auto;
-          }
         }
 
         label {
@@ -97,8 +92,8 @@
           transform: translateY(-50%);
           pointer-events: none;
         }
-        input:focus + label ,
-        input:valid +label{
+        input:focus + label,
+        input:valid + label {
           font-size: 12px;
           top: 0;
           color: var(--primary-color);
@@ -123,7 +118,6 @@
     }
     @media screen and (max-width: 600px) {
       width: auto;
-     
     }
   }
 }

@@ -1,9 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ServiceProvider.scss";
 import { images } from "../../Constants";
 import { useNavigate } from "react-router-dom";
 
 const ServiceProvider = () => {
+  const [shopdata, setShopData] = useState({
+    shop_profilepicture: "",
+    shop_name: "",
+    shop_address: "",
+  });
+  // const handleChange = (e) => {
+  //   setShopData((elem) => {
+  //     return { ...elem, [e.target.value]: e.target.name };
+  //   });
+  // };
+  const handleChange = (event) => {
+    setShopData((predata) => {
+      return { ...predata, [event.target.name]: event.target.value };
+    });
+  };
+  console.log(shopdata);
   const navigate = useNavigate();
   return (
     <div className="serviceprovider_container">
@@ -22,17 +38,31 @@ const ServiceProvider = () => {
                 name="profile-picture"
                 accept="image/*"
                 multiple="false"
+                value={shopdata.shop_profilepicture}
+                onChange={handleChange}
               />
               <div>
                 <img src={images.profile_image} />
               </div>
             </div>
             <div className="shop name">
-              <input type="text" name="shop-name" required />
+              <input
+                type="text"
+                name="shop_name"
+                value={shopdata.shop_name}
+                onChange={handleChange}
+                required
+              />
               <label htmlFor="shop-name">Shop Name</label>
             </div>
             <div className="shop address">
-              <input type="text" name="shop-address" required />
+              <input
+                type="text"
+                name="shop_address"
+                value={shopdata.shop_address}
+                onChange={handleChange}
+                required
+              />
               <label htmlFor="shop-address">Address</label>
             </div>
             <div className="btn">

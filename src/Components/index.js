@@ -13,3 +13,5 @@ export { default as Footer } from "./Footer/Footer";
 export { default as Passwordresetmail } from "./Auth/Passwordresetmail/Passwordresetmail";
 export { default as Checkemail } from "./Auth/Passwordresetmail/Checkemail";
 export { default as Resetpassword } from "./Auth/ResetPassword/Resetpassword";
+export { default as Bookingpage } from "./Bookingpage/Bookingpage";
+export { default as Customerprofile } from "./Customer/CustomerProfile";

@@ -4,12 +4,15 @@ import "./ShopProfile.scss";
 import { BsFillGeoAltFill } from "react-icons/bs";
 import { BiEdit } from "react-icons/bi";
 import { HiOutlineStatusOnline, HiOutlineStatusOffline } from "react-icons/hi";
-
+import Popup from "reactjs-popup";
+import "reactjs-popup/dist/index.css";
 
 const ShopProfile = () => {
   const d = new Date();
   const time = d.toLocaleString([], { hour: "2-digit", minute: "2-digit" });
 
+ 
+  
   return (
     <div className="shopProfile_container">
       <div className="shopprofile_details">
@@ -35,9 +38,22 @@ const ShopProfile = () => {
               </div>
               <div>Available now</div>
             </div>
-            <span className="edit-btn">
-              <BiEdit />
-            </span>
+            <Popup
+              trigger={
+                <span className="edit-btn">
+                  <BiEdit />
+                </span>
+              }
+              position="right center"
+            >
+              <form>
+                <input type="file" name="profil-pic" />
+                <input type="text" name="profile-name" />
+                <input type="text" name="shop-address" />
+                <input type="text" name="avalibility" />
+                <button>save</button>
+              </form>
+            </Popup>
           </div>
         </div>
         <div className="setting-section">
@@ -113,7 +129,7 @@ const ShopProfile = () => {
           <img src={images.hairstyle1} alt="" />
           <img src={images.hairstyle2} alt="" />
           <img src={images.hairstyle3} alt="" />
-          <img src={images.hairstyle4} alt="" />
+          <img src={images.hairstyle2} alt="" />
           <img src={images.hairstyle5} alt="" />
           <img src={images.hairstyle6} alt="" />
         </div>

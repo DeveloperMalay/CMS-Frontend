@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { images } from "../../Constants";
 import "./Welcome.scss";
 
-const Welcome = () => {
+const Welcome = ({ setuser }) => {
   const navigate = useNavigate();
   return (
     <div className="welcome__container">
@@ -16,6 +16,7 @@ const Welcome = () => {
           <button
             onClick={() => {
               navigate("/customerdata");
+              setuser("customer");
             }}
           >
             Customer
@@ -23,6 +24,7 @@ const Welcome = () => {
           <button
             onClick={() => {
               navigate("/serviceproviderdetails");
+              setuser("suriceprovider");
             }}
           >
             Service Provider

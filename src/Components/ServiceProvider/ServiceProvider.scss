@@ -82,7 +82,8 @@
           transform: translateY(-50%);
           pointer-events: none;
         }
-        input:focus + label {
+        input:focus + label,
+        input:valid + label {
           font-size: 12px;
           top: 0;
           color: var(--primary-color);

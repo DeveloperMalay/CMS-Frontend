@@ -6,7 +6,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var( --background-color);
+  background-color: var(--background-color);
   .greeting_message {
     width: 90%;
   }
@@ -27,24 +27,25 @@
         background-color: var(--white-color);
         color: var(--primary-color);
         width: 21.5rem;
-        height: 10rem;
+        height: 11rem;
         padding: 20px 0;
         border-radius: 8px;
         cursor: pointer;
         margin: 20px;
         display: flex;
         transition: all 0.2s ease-in-out;
+
         &:hover {
           box-shadow: 6px 10px 10px 0px rgba(160, 154, 154, 0.75);
-          margin-top: 17px;
+          transform: translateY(-10px);
         }
         .card__sec1 {
           width: 12rem;
           background-color: #fff;
           .profile {
-            font-size: 5rem;
+            font-size: 4rem;
             display: block;
-            height: 5rem;
+            height: 4.5rem;
             margin-left: 15px;
             background-color: #fff;
             span {
@@ -90,6 +91,23 @@
               font-size: 12px;
             }
           }
+
+          .ph-number {
+            margin: 5px 10px 5px 10px;
+            background-color: #fff;
+            span {
+              font-weight: bold;
+              padding: 2px;
+              background-color: #fff;
+              &:hover {
+                text-decoration: underline;
+                color: rgb(20, 101, 232);
+              }
+            }
+            @media screen and (max-width: 600px) {
+              font-size: 12px;
+            }
+          }
           @media screen and (max-width: 600px) {
             width: auto;
           }
@@ -104,11 +122,11 @@
           @media screen and (max-width: 600px) {
             font-size: 12px;
             width: 7rem;
-            margin-right: 5px;
+            margin-left: 5rem;
           }
         }
         @media screen and (max-width: 600px) {
-          width: auto;
+          width: 20rem;
           height: auto;
         }
       }

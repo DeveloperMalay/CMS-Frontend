@@ -52,6 +52,7 @@
           margin: 10px;
           color: #000;
         }
+
         .edit-btn {
           color: #000;
           cursor: pointer;
@@ -59,7 +60,6 @@
           &:hover {
             color: var(--primary-color);
           }
-          // display: inline-block;
         }
       }
     }
@@ -91,11 +91,15 @@
         border: none;
         margin: 10px;
       }
+      @media screen and (max-width: 600px) {
+        margin-left: 0;
+      }
     }
 
     @media screen and (max-width: 600px) {
       width: auto;
       flex-direction: column;
+      padding: 5px;
     }
   }
 
@@ -133,6 +137,12 @@
             background-color: var(--btn-color);
             color: #fff;
           }
+          @media screen and (max-width: 600px) {
+            margin: 5px;
+          }
+        }
+        @media screen and (max-width: 600px) {
+          grid-template-columns: auto auto;
         }
       }
       .timeslot_edit-btn {
@@ -145,6 +155,12 @@
         &:hover {
           color: var(--primary-color);
         }
+        @media screen and (max-width: 600px) {
+          right: 5rem;
+        }
+      }
+      @media screen and (max-width: 600px) {
+        padding: 0 5px;
       }
     }
     .serices_menu {
@@ -162,6 +178,9 @@
           justify-content: space-around;
           width: 30rem;
           margin: 10px 0;
+          @media screen and (max-width: 600px) {
+            width: 20rem;
+          }
         }
       }
     }
@@ -192,6 +211,9 @@
         height: 10rem;
         margin: 30px;
       }
+      @media screen and (max-width: 600px) {
+        grid-template-columns: auto auto;
+      }
     }
     .galary-btn {
       position: absolute;
@@ -204,5 +226,11 @@
         color: var(--primary-color);
       }
     }
+    @media screen and (max-width: 600px) {
+      width: auto;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    width: auto;
   }
 }
