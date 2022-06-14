@@ -6,6 +6,7 @@
   align-items: center;
   font-family: var(--font-base);
   height: auto;
+  width: auto;
   h2 {
     margin: 20px 0 0 0;
   }
@@ -16,7 +17,8 @@
     display: flex;
     border-radius: 8px;
     flex-direction: column;
-    // background-color: var(--white-color);
+    justify-content: center;
+    align-items: center;
     .today {
       width: 100%;
       min-height: 8rem;

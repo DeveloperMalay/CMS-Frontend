@@ -9,10 +9,10 @@
   .sericeproider_details {
     display: flex;
     background-color: #fff;
-    // background-color: var(--primary-color);
     height: 30rem;
     width: 45rem;
-    // border: 2px solid #fff;
+    align-items: center;
+    justify-content: center;
     border-radius: 10px;
     padding: 10px;
     .shop_vectorimage {
@@ -28,6 +28,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
       //   border: 1px solid var(--primary-color);
       border-radius: 10px;
       padding: 5px;
@@ -39,11 +40,31 @@
       .profile_pic {
         position: relative;
         input {
-          display: none;
-        }
-        img {
-          width: 7rem;
+          position: absolute;
+          top: 81px;
+          left: 63px;
+          opacity: 0;
           cursor: pointer;
+          z-index: 999;
+        }
+        span {
+          position: absolute;
+          cursor: pointer;
+          top: 81px;
+          left: 90px;
+          color: var(--primary-color);
+          font-weight: bold;
+          font-size: 20px;
+          background-color: #fff;
+          border-radius: 50%;
+        }
+        .previewPic {
+          img {
+            width: 7rem;
+            height: 7rem;
+            background-color: var(--button-color);
+            border-radius: 50%;
+          }
         }
       }
 
@@ -64,7 +85,7 @@
             border-color: var(--primary-color);
           }
           @media screen and (max-width: 600px) {
-            width: auto;
+            width: 300px;
           }
         }
 
@@ -107,7 +128,7 @@
       }
     }
     @media screen and (max-width: 600px) {
-      width: auto;
+      width: 380px;
       height: fit-content;
     }
   }

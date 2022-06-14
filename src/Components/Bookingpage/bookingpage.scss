@@ -31,13 +31,14 @@
           background-color: var(--btn-color);
           color: #fff;
         }
+        @media screen and (max-width: 600px) {
+          width: 7rem;
+        }
       }
       @media screen and (max-width: 600px) {
         margin-left: 0px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: auto auto;
       }
     }
 
@@ -58,19 +59,19 @@
           background-color: var(--primary-color);
           color: #fff;
         }
-       
       }
       @media screen and (max-width: 600px) {
-        margin-left: 0px;
+        margin: 0;
       }
     }
     @media screen and (max-width: 600px) {
-      margin-top: 20px;
+      margin-top: 10px;
       width: auto;
+      margin-bottom: 20px;
     }
   }
   @media screen and (max-width: 600px) {
     grid-template-columns: auto;
-    margin:0 20px;
+    margin: 0 20px;
   }
 }

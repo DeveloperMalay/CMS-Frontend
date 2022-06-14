@@ -36,7 +36,7 @@
     }
     p {
       color: rgb(101, 101, 101);
-      margin: 10px 0;
+      margin: 10px 5px;
     }
     button {
       color: #fff;
@@ -48,7 +48,7 @@
       cursor: pointer;
       border: none;
       margin: 10px 0;
-      a{
+      a {
         text-decoration: none;
         color: #fff;
       }
@@ -63,6 +63,12 @@
       margin-top: 26rem;
       width: 28rem;
       margin-left: 36px;
+      @media screen and (max-width: 600px) {
+        width: 20rem;
+      }
+    }
+    @media screen and (max-width: 600px) {
+      width: 380px;
     }
   }
 }

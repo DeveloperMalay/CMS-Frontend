@@ -81,6 +81,40 @@ const Navbar = ({ userindefier }) => {
           <p>Profile</p>
         </div>
       </nav>
+      <div className="bottom-navigation">
+        <ul>
+          <li className="list active">
+            <Link to="/home">
+              <span className="icon">
+                <AiOutlineHome />
+              </span>
+              <span className="text">Home</span>
+            </Link>
+          </li>
+          <li className="list active">
+            <Link to="/home/search">
+              <span className="icon">
+                <BsSearch />
+              </span>
+              <span className="text">Search</span>
+            </Link>
+          </li>
+          <li className="list">
+            <Link
+              to={
+                userindefier === "customer"
+                  ? "/home/customerprofile"
+                  : "/home/shopprofile"
+              }
+            >
+              <span className="icon">
+                <BsPerson />
+              </span>
+              <span className="text">Profile</span>
+            </Link>
+          </li>
+        </ul>
+      </div>
       <Outlet />
       <Footer />
     </>
@@ -89,14 +123,8 @@ const Navbar = ({ userindefier }) => {
 
 export default Navbar;
 
-
-
-
-
-
-
-
-{/* <div className="mobile-bottom-navbar">
+{
+  /* <div className="mobile-bottom-navbar">
   <ul>
     <li className="list active" onClick={activeLink}>
       <Link to="/home">
@@ -130,4 +158,5 @@ export default Navbar;
     </li>
     <div className="indicator"></div>
   </ul>
-</div> */}
+</div> */
+}
