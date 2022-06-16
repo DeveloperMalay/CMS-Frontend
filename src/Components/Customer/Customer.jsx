@@ -4,16 +4,17 @@ import { images } from "../../Constants";
 import "./Customer.scss";
 import { motion } from "framer-motion";
 import { BsFillPlusCircleFill } from "react-icons/bs";
+import { useCreatePostMutation } from "../../services/posts/Customerpost";
 
 const Customer = () => {
   const navigate = useNavigate();
-
+  const [createpost, responseInfo] = useCreatePostMutation();
   const [imagepreview, setImagePreview] = useState();
   const [customerData, setCustomerData] = useState({
+    name: "",
     age: "",
     gender: "",
     phone: "",
-    whatsapp: "",
   });
 
   const handleChange = (event) => {
@@ -21,7 +22,6 @@ const Customer = () => {
       return { ...predata, [event.target.name]: event.target.value };
     });
   };
- 
 
   // to change profile picture
   const handleImagechange = (e) => {
@@ -34,16 +34,20 @@ const Customer = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const customerPersonal_data = {
+      imagepreview,
+      customerData,
+    };
+  
     console.log(customerData);
     navigate("/home");
-   
-  }; 
+  };
 
   return (
     <div className="customer__container">
       <motion.div
         whileInView={{ opacity: [0, 1] }}
-        transition={{ duration: 2 }}
+        transition={{ duration: 2, ease: "easeInOut" }}
       >
         <div className="customer_details">
           <div className="vector_image">
@@ -72,6 +76,16 @@ const Customer = () => {
                   />
                 </div>
               </div>
+              <div className="number name">
+                <input
+                  type="text"
+                  name="name"
+                  onChange={handleChange}
+                  value={customerData.name}
+                  required
+                />
+                <label htmlFor="name">Name</label>
+              </div>
               <div className="number age">
                 <input
                   type="text"
@@ -90,7 +104,7 @@ const Customer = () => {
                   value={customerData.gender}
                   required
                 >
-                  <option value="">--Gender--</option>
+                  <option value="">- - Gender - -</option>
                   <option value="male">Male</option>
                   <option value="female">Female</option>
                 </select>
@@ -105,7 +119,7 @@ const Customer = () => {
                 />
                 <label htmlFor="phone">Phone</label>
               </div>
-              <div className="number whatsapp">
+              {/* <div className="number whatsapp">
                 <input
                   type="tel"
                   name="whatsapp"
@@ -114,7 +128,7 @@ const Customer = () => {
                   required
                 />
                 <label htmlFor="whatsapp">Whatsapp</label>
-              </div>
+              </div> */}
               <div className="btn">
                 <button>Submit</button>
               </div>

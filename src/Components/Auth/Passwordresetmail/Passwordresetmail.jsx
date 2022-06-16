@@ -11,7 +11,7 @@ const Passwordresetmail = () => {
     <div className="send_email">
       <motion.div
         whileInView={{ opacity: [0, 1] }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 2 }}
       >
         <form action="">
           <div className="form__container">

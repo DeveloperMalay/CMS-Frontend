@@ -4,7 +4,6 @@ import "./SignUp.scss";
 import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 import { motion } from "framer-motion";
 
-
 const SignUp = () => {
   const [formData, setFormData] = useState({
     username: "",
@@ -24,6 +23,9 @@ const SignUp = () => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
+    setTimeout(() => {
+      navigate("/welcome");
+    }, [200]);
     console.log(formData);
   };
 
@@ -80,20 +82,16 @@ const SignUp = () => {
               </span>
             </div>
             <div className="btn">
-              <button
-                onClick={() => {
-                  navigate("/welcome");
-                }}
-              >
-                SignUp
-              </button>
+              <button>SignUp</button>
             </div>
             <div className="log-in">
               <span>Already have an Account?</span>
               <span
                 className="link"
                 onClick={() => {
-                  navigate("/login");
+                  setTimeout(() => {
+                    navigate("/login");
+                  }, [200]);
                 }}
               >
                 Login

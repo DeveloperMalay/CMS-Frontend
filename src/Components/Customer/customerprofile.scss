@@ -11,12 +11,49 @@
     border-radius: 12px;
     padding: 20px;
     width: 50rem;
+    .profile_pic {
+      position: relative;
+      input {
+        position: absolute;
+        top: 11rem;
+        left: 9rem;
+        opacity: 0;
+        cursor: pointer;
+        z-index: 999;
+        @media screen and (max-width: 600px) {
+          left: 0;
+        }
+      }
+      span {
+        position: absolute;
+        cursor: pointer;
+        top: 11rem;
+        left: 11.5rem;
+        color: var(--primary-color);
+        font-weight: bold;
+        font-size: 26px;
+        background-color: #fff;
+        border-radius: 50%;
+      }
+      .previewPic {
+        img {
+          width: 14rem;
+          height: 14rem;
+          background-color: var(--button-color);
+          border-radius: 50%;
+          border: 1px solid var(--btn-color);
+        }
+      }
+    }
     .name {
       span {
         font-size: 30px;
         font-weight: bold;
         color: var(--primary-color);
       }
+    }
+    @media screen and (max-width: 600px) {
+      width: 23rem;
     }
   }
 }

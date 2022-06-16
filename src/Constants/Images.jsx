@@ -11,6 +11,7 @@ import hairstyle3 from "../assets/hairstyle3.jpeg";
 import hairstyle4 from "../assets/hairstyle4";
 import hairstyle5 from "../assets/hairstyle5.jpeg";
 import hairstyle6 from "../assets/hairstyle6.jpeg";
+import success from "../assets/Success.gif";
 
 export default {
   login_image,
@@ -26,4 +27,5 @@ export default {
   hairstyle4,
   hairstyle5,
   hairstyle6,
+  success,
 };

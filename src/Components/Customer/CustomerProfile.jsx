@@ -1,21 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { images } from "../../Constants";
 import { BsFillGeoAltFill } from "react-icons/bs";
 import "./customerprofile.scss";
 import { motion } from "framer-motion";
-
-const scaleVarient = {
-  whileInView: {
-    scale: [0, 1],
-    opacity: [0, 1],
-    transition: {
-      duration: 2,
-      ease: "easeIn",
-    },
-  },
-};
+import { BsFillPlusCircleFill } from "react-icons/bs";
 
 const CustomerProfile = () => {
+  const [imagepreview, setImagePreview] = useState();
+
+  // to change profile picture
+  const handleImagechange = (e) => {
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      setImagePreview(reader.result);
+    };
+    reader.readAsDataURL(e.target.files[0]);
+  };
+
   const d = new Date();
   const time = d.toLocaleString([], { hour: "2-digit", minute: "2-digit" });
 
@@ -23,11 +24,23 @@ const CustomerProfile = () => {
     <div className="customer_profile">
       <motion.div
         whileInView={{ opacity: [0, 1] }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 2, ease: "easeInOut" }}
       >
         <div className="customer_profile-details">
-          <div className="customer_profile-pic">
-            <img src={images.profile_image} alt="" />
+          <div className="profile_pic">
+            <input
+              type="file"
+              name="profilePic"
+              accept=".png, .jpg, .jpeg"
+              multiple={false}
+              onChange={handleImagechange}
+            />
+            <span>
+              <BsFillPlusCircleFill />
+            </span>
+            <div className="previewPic">
+              <img src={!imagepreview ? images.profile_image : imagepreview} />
+            </div>
           </div>
           <div className="name">
             <span>Malay Pandit</span>
@@ -42,9 +55,6 @@ const CustomerProfile = () => {
           </div>
           <div className="phone">
             <span>1232687586</span>
-          </div>
-          <div className="wp-no">
-            <span>5236565468</span>
           </div>
         </div>
       </motion.div>

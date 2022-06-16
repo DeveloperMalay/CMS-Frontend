@@ -3,26 +3,17 @@ import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import "./bookingpage.scss";
 import { motion } from "framer-motion";
-
-const scaleVarient = {
-  whileInView: {
-    scale: [0, 1],
-    opacity: [0, 1],
-    transition: {
-      duration: 2,
-      ease: "easeIn",
-    },
-  },
-};
+import Success from "./SuccessAlert/Success";
 
 const Bookingpage = () => {
   const [inputDate, setInputDate] = useState(new Date());
-  const [inputtime, setInputTime] = useState();
-
+  const [displaysuccesAlert, setDisplaySuccessAlert] = useState("none");
+  console.log(displaysuccesAlert);
   const booksuccess = () => {
-    setTimeout(() => {
-      alert("booking successful");
-    }, 1000);
+    setDisplaySuccessAlert("block");
+    // setTimeout(() => {
+    //   alert("booking successful");
+    // }, 1000);
   };
 
   const timeslot = [
@@ -43,7 +34,7 @@ const Bookingpage = () => {
     console.log("10:00am");
   }
   return (
-    <motion.div whileInView={{ opacity: [0, 1] }} transition={{ duration: 1 }}>
+    <motion.div whileInView={{ opacity: [0, 1] }} transition={{ duration: 2 }}>
       <div className="bookingpage">
         <div className="calender">
           <Calendar onChange={setInputDate} value={inputDate} />
@@ -58,6 +49,9 @@ const Bookingpage = () => {
             <button>Book Appoinment</button>
           </div>
         </div>
+      </div>
+      <div className="alert" style={{ display: "none" }}>
+        <Success />
       </div>
     </motion.div>
   );
