@@ -18,9 +18,11 @@ const Notification = () => {
     <div className="notification_container">
       <h2>Notifications</h2>
       <motion.div
-        whileInView={{ opacity: [0, 1] }}
-        transition={{ duration: 1 }}
-        style={{ width: "100%",display:"flex",justifyContent:'center' }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 2 }}
+        style={{ width: "100%", display: "flex", justifyContent: "center" }}
       >
         <div className="notifications">
           <div className="today">

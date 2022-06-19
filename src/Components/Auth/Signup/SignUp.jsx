@@ -3,16 +3,19 @@ import { useNavigate } from "react-router-dom";
 import "./SignUp.scss";
 import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 import { motion } from "framer-motion";
+import { app } from "../../../Firebase/FirebaseConfig";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
 const SignUp = () => {
+  const auth = getAuth();
+
   const [formData, setFormData] = useState({
     username: "",
     email: "",
     password: "",
   });
-
   const [showpassword, setShowpassword] = useState(true);
-
+  const [submitButtonDisabled, setSubmitButtonDisabled] = useState(false);
   const Show = () => {
     setShowpassword(!showpassword);
   };
@@ -23,19 +26,33 @@ const SignUp = () => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    setTimeout(() => {
-      navigate("/welcome");
-    }, [200]);
+    setSubmitButtonDisabled(true);
+
     console.log(formData);
+    createUserWithEmailAndPassword(auth, formData.email, formData.password)
+      .then((res) => {
+        console.log(res);
+        setSubmitButtonDisabled(false);
+        setTimeout(() => {
+          navigate("/welcome");
+        }, [200]);
+      })
+      .catch((err) => {
+        setSubmitButtonDisabled(true);
+        alert(err.message);
+      });
   };
 
   let navigate = useNavigate();
+
   return (
     <div className="SignUp">
       <span className="main-header">Welcome! to MySalon</span>
 
       <motion.div
-        whileInView={{ opacity: [0, 1] }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
         transition={{ duration: 2 }}
       >
         <form onSubmit={handleSubmit}>
@@ -57,7 +74,7 @@ const SignUp = () => {
             </div>
             <div className="form-item">
               <input
-                type="text"
+                type="email"
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
@@ -82,7 +99,7 @@ const SignUp = () => {
               </span>
             </div>
             <div className="btn">
-              <button>SignUp</button>
+              <button disabled={submitButtonDisabled}>SignUp</button>
             </div>
             <div className="log-in">
               <span>Already have an Account?</span>

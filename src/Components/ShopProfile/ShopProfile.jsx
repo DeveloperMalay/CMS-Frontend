@@ -8,8 +8,6 @@ import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
 import { motion } from "framer-motion";
 
-
-
 const ShopProfile = () => {
   const d = new Date();
   const time = d.toLocaleString([], { hour: "2-digit", minute: "2-digit" });
@@ -17,9 +15,17 @@ const ShopProfile = () => {
   return (
     <div className="shopProfile_container">
       <motion.div
-        whileInView={{ opacity: [0, 1] }}
-        transition={{ duration: 1 }}
-        style={{ width: "100%",display:"flex",justifyContent:'center',flexDirection:"column",alignItems:"center" }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 2 }}
+        style={{
+          width: "100%",
+          display: "flex",
+          justifyContent: "center",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
       >
         <div className="shopprofile_details">
           <div className="profile-picture">

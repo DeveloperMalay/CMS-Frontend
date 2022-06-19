@@ -11,8 +11,10 @@ const Checkemail = () => {
   return (
     <div className="checkemail_container">
       <motion.div
-        whileInView={{  opacity: [0, 1] }}
-        transition={{ duration: 2 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{opacity:0}}
+      transition={{ duration: 2 }}
       >
         <div className="success-card">
           <div className="email-logo">

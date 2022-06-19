@@ -3,10 +3,10 @@ import { useNavigate, Link } from "react-router-dom";
 import "./Login.scss";
 import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 import { motion } from "framer-motion";
-
-
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
 const Login = () => {
+  const auth = getAuth();
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -23,22 +23,40 @@ const Login = () => {
     });
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(formData);
+    signInWithEmailAndPassword(auth, formData.email, formData.password)
+      .then((res) => {
+        console.log(res);
+        setTimeout(() => {
+          navigate("/home");
+        }, [200]);
+      })
+      .catch((err) => {
+        alert(err.message);
+      });
+  };
+
   let navigate = useNavigate();
   return (
     <div className="login">
       <span className="main-header">Welcome! to MySalon</span>
       <motion.div
-        whileInView={{ opacity: [0, 1] }}
+        // whileInView={{ opacity: [0.5, 1] }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
         transition={{ duration: 2 }}
       >
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="form__container">
             <header>
               <h1>Login</h1>
             </header>
             <div className="form-item">
               <input
-                type="text"
+                type="email"
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
@@ -64,12 +82,7 @@ const Login = () => {
             <Link to="/passwordresetmail" className="forget_password">
               <p>Forget Password?</p>
             </Link>
-            <div
-              className="btn"
-              onClick={() => {
-                navigate("/home");
-              }}
-            >
+            <div className="btn">
               <button>Login</button>
             </div>
             <div className="sign-in">

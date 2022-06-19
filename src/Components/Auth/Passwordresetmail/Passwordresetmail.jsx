@@ -4,13 +4,14 @@ import { useNavigate } from "react-router-dom";
 import { RiLockPasswordFill } from "react-icons/ri";
 import { motion } from "framer-motion";
 
-
 const Passwordresetmail = () => {
   const navigate = useNavigate();
   return (
     <div className="send_email">
       <motion.div
-        whileInView={{ opacity: [0, 1] }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
         transition={{ duration: 2 }}
       >
         <form action="">

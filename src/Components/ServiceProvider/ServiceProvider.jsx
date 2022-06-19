@@ -35,14 +35,14 @@ const ServiceProvider = () => {
   return (
     <div className="serviceprovider_container">
       <motion.div
-        whileInView={{
-          opacity: [0, 1],
-        }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
         transition={{ duration: 2 }}
       >
         <div className="sericeproider_details">
           <div className="shop_vectorimage">
-            <img src={images.shopdata_image} alt="" />
+            <img src={images.shopdata_image} alt="vector-image" />
           </div>
           <form onSubmit={handleSubmit}>
             <div className="shop-data">
@@ -54,7 +54,7 @@ const ServiceProvider = () => {
                   type="file"
                   name="profile-picture"
                   accept="image/*"
-                  multiple="false"
+                  multiple={false}
                   onChange={handleImagechange}
                 />
                 <span>

@@ -4,8 +4,6 @@ import { RiLockPasswordFill } from "react-icons/ri";
 import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 import { motion } from "framer-motion";
 
-
-
 const Resetpassword = () => {
   // const [data, setdata] = useState({
   //   previous_password: "",
@@ -26,7 +24,9 @@ const Resetpassword = () => {
   return (
     <div className="reset">
       <motion.div
-        whileInView={{  opacity: [0, 1] }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
         transition={{ duration: 2 }}
       >
         <form>
